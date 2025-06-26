@@ -46,8 +46,8 @@ VALUES (
 );
  SELECT * FROM login;
  
-CREATE TABLE IF NOT EXISTS cliente (
-  id_cliente INTEGER PRIMARY KEY AUTOINCREMENT,
+CREATE TABLE IF NOT EXISTS clientes (
+  id_clientes INTEGER PRIMARY KEY AUTOINCREMENT,
   nome VARCHAR(100) NOT NULL,
   data_nascimento DATE,
   telefone VARCHAR(15),
@@ -56,7 +56,7 @@ CREATE TABLE IF NOT EXISTS cliente (
   email VARCHAR(100),
   cpf VARCHAR(14) NOT NULL UNIQUE
 );
-INSERT INTO cliente (nome, data_nascimento, telefone, telefone_emergencia, endereco, email, cpf)
+INSERT INTO clientes (nome, data_nascimento, telefone, telefone_emergencia, endereco, email, cpf)
 VALUES (
   'Mariana Schakofski',
   '2007-01-01',
@@ -66,8 +66,8 @@ VALUES (
   'mariana@gmail.com',
   '123.221.456-11'
 );
-SELECT * FROM cliente;
-
+ SELECT Nome, Email FROM Clientes WHERE 2007-01-01;
+ 
 CREATE TABLE IF NOT EXISTS exercicio (
   id_exercicio INTEGER PRIMARY KEY AUTOINCREMENT,
   nome VARCHAR(50) NOT NULL,
