@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS cargo (
+ CREATE TABLE IF NOT EXISTS cargo (
   id_cargo INTEGER PRIMARY KEY AUTOINCREMENT,
   nome_cargo VARCHAR(50) NOT NULL UNIQUE,
   descricao TEXT
@@ -105,12 +105,15 @@ CREATE TABLE IF NOT EXISTS plano_treino_item (
   FOREIGN KEY (id_plano) REFERENCES plano_treino(id_plano),
   FOREIGN KEY (id_exercicio) REFERENCES exercicio(id_exercicio)
 );
-INSERT INTO plano_treino (id_cliente, id_funcionario, data_criacao, valido_ate)
+INSERT INTO plano_treino_item (id_plano, id_exercicio, series, repeticoes, carga, dia_semana, observacoes)
 VALUES (
   1,
   1,
-  '2023-10-01',
-  '2023-11-01'
+  3,
+  15,
+  30,
+  'sexta-feira',
+  'observações'
 );
 SELECT * FROM plano_treino;
 
